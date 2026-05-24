@@ -60,6 +60,10 @@ async function loadConfig() {
     }
     if (cfg.musicBaseUrl) window.__musicBase = cfg.musicBaseUrl;
     if (cfg.featuredAlbumId != null) featuredAlbumId = cfg.featuredAlbumId;
+    if (cfg.aiAgentMeta) {
+      const el = document.getElementById('aiAgentMeta');
+      if (el) el.setAttribute('content', cfg.aiAgentMeta);
+    }
   } catch (e) {
     // config optional, silently ignore
   }
