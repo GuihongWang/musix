@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ★ 自定义网站标题 -->
+  <title>我的CD收藏 - iTunes</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- ★ 自定义 CSS：编辑 custom.css 覆盖样式 -->
+  <link rel="stylesheet" href="custom.css">
+</head>
+<body>
+  <audio id="audioPlayer" preload="none" controlsList="nodownload noremoteplayback"></audio>
+
+  <div class="app">
+    <!-- ========== TOP TOOLBAR (参考图风格: 左-中-右) ========== -->
+    <header class="top-toolbar">
+      <!-- 左: 播放控件 + 进度条 + 时间 -->
+      <div class="tb-left">
+        <button class="tb-btn" id="prevBtn" title="上一首">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polygon points="19 20 9 12 19 4"/><rect x="5" y="4" width="1.5" height="16" fill="currentColor"/></svg>
+        </button>
+        <button class="tb-btn tb-play" id="playBtn" title="播放/暂停">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" id="playIcon"><polygon points="8,4 20,12 8,20"/></svg>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" id="pauseIcon" class="hidden"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+        </button>
+        <button class="tb-btn" id="nextBtn" title="下一首">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 4 15 12 5 20"/><rect x="17.5" y="4" width="1.5" height="16" fill="currentColor"/></svg>
+        </button>
+        <div class="tb-progress-wrap">
+          <div class="tb-progress-track" id="progTrack">
+            <div class="tb-progress-fill" id="progFill" style="width:0%"></div>
+            <div class="tb-progress-thumb" id="progThumb" style="left:0%"></div>
+          </div>
+        </div>
+        <span class="tb-time" id="timeCurrent">0:00</span>
+        <span class="tb-time tb-time-remaining" id="timeTotal">-5:05</span>
+      </div>
+
+      <!-- 中: 封面 + 标题 + 副标题 -->
+      <div class="tb-center">
+        <div class="tb-center-cover" id="infoCover">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#bbb" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4" fill="#bbb"/></svg>
+        </div>
+        <div class="tb-center-text">
+          <div class="tb-center-title" id="infoTitle">未播放</div>
+          <div class="tb-center-sub" id="infoSub">从专辑中选择歌曲</div>
+        </div>
+      </div>
+
+      <!-- 右: 循环 + 音量 + 搜索 -->
+      <div class="tb-right">
+        <button class="tb-btn" id="repeatBtn" title="重复播放">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 014-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg>
+        </button>
+        <div class="tb-vol-wrap">
+          <div class="vol-track" id="volTrack">
+            <div class="vol-fill" id="volFill" style="width:70%"></div>
+            <div class="vol-thumb" id="volThumb" style="left:70%"></div>
+          </div>
+        </div>
+        <div class="tb-search">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          <input type="text" id="searchInput" placeholder="搜索">
+        </div>
+      </div>
+    </header>
+
+    <!-- ========== BODY: Source List + Content ========== -->
+    <div class="app-body">
+      <!-- Source List -->
+      <aside class="source-list">
+        <div class="sl-header">
+          <span style="font-size:11px;color:var(--text-muted);">浏览</span>
+        </div>
+        <nav class="sl-nav">
+          <div class="sl-group">
+            <div class="sl-group-title">资料库</div>
+            <a href="#" class="sl-item active" data-view="library">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>音乐库
+            </a>
+            <a href="#" class="sl-item" data-view="albums">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3" fill="currentColor"/></svg>专辑
+            </a>
+            <a href="#" class="sl-item" data-view="artists">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>歌手
+            </a>
+            <a href="#" class="sl-item" data-view="genres">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>分类
+            </a>
+          </div>
+          <div class="sl-group">
+            <div class="sl-group-title">播放列表</div>
+            <a href="#" class="sl-item" data-view="recent">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>最近添加
+            </a>
+          </div>
+        </nav>
+          <div class="sl-footer">
+            <!-- ★ 自定义：LOGO + 标题 -->
+            <div class="sl-logo" style="margin-bottom:2px;">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4" fill="#fff"/></svg>
+              <span style="font-size:12px;">我的音乐</span>
+            </div>
+            <div style="font-size:9px;color:var(--text-light);line-height:1.3;margin-bottom:3px;">仅作为版权收藏用途展示</div>
+            <span id="albumCount" style="font-size:10px;">15 张专辑</span>
+          </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <div class="toolbar-sub">
+          <button class="tb-btn tb-nav" id="backBtn" title="后退">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button class="tb-btn tb-nav" id="forwardBtn" title="前进">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+          <span style="font-size:11px;color:var(--text-muted);margin-left:6px;" id="albumCountSub">15 张专辑</span>
+        </div>
+
+        <div class="content-area" id="contentArea">
+          <!-- Library View -->
+          <div class="view" id="view-library">
+            <div class="lib-header">
+              <div class="lib-header-art"><img src="" alt="" id="libCover"></div>
+              <div class="lib-header-info">
+                <span class="lib-badge">精选专辑</span>
+                <h1 id="libTitle"></h1>
+                <p class="lib-artist" id="libArtist"></p>
+                <div class="lib-meta" id="libMeta"></div>
+                <div class="lib-desc" id="libDesc"></div>
+                <div class="lib-actions">
+                  <button class="prim-btn" id="libPlayBtn"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><polygon points="8,5 19,12 8,19"/></svg>播放</button>
+                  <button class="sec-btn" id="libShuffleBtn"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>随机播放</button>
+                </div>
+              </div>
+            </div>
+            <section class="section">
+              <div class="sec-header"><h2>最近添加</h2><a href="#" class="sec-link" data-view="recent">显示全部</a></div>
+              <div class="grid" id="recentGrid"></div>
+            </section>
+            <section class="section">
+              <div class="sec-header"><h2>所有专辑</h2><a href="#" class="sec-link" data-view="albums">显示全部</a></div>
+              <div class="grid" id="allGrid"></div>
+            </section>
+          </div>
+
+          <!-- Albums View -->
+          <div class="view hidden" id="view-albums">
+            <div class="sec-header" style="padding:20px 24px 4px;border:none;"><h1 style="font-size:22px;font-weight:700;">专辑</h1></div>
+            <div class="filter-row" id="filterRow" style="padding:8px 24px;"></div>
+            <div class="section"><div class="grid" id="albumsGrid"></div></div>
+          </div>
+
+          <!-- Artists View -->
+          <div class="view hidden" id="view-artists">
+            <div class="page-hdr"><h1>歌手</h1></div>
+            <div class="artist-grid" id="artistGrid"></div>
+          </div>
+
+          <!-- Genres View -->
+          <div class="view hidden" id="view-genres">
+            <div class="page-hdr"><h1>分类</h1></div>
+            <div class="genre-grid" id="genreGrid"></div>
+          </div>
+
+          <!-- Recent View -->
+          <div class="view hidden" id="view-recent">
+            <div class="sec-header" style="padding:20px 24px 4px;border:none;"><h1 style="font-size:22px;font-weight:700;">最近添加</h1></div>
+            <div class="section"><div class="grid" id="recentAllGrid"></div></div>
+          </div>
+
+          <!-- Album Detail View -->
+          <div class="view hidden" id="view-detail">
+            <div class="detail-wrap" id="detailWrap"></div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="toast" id="toast"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

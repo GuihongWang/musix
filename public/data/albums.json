@@ -1,0 +1,962 @@
+[
+    {
+        "id": 1,
+        "title": "Abbey Road",
+        "artist": "The Beatles",
+        "year": 1969,
+        "genre": "摇滚",
+        "style": "经典摇滚 / 迷幻摇滚",
+        "cover": "https://upload.wikimedia.org/wikipedia/en/4/42/Beatles_-_Abbey_Road.jpg",
+        "tracks": [
+            {
+                "title": "Come Together",
+                "url": "/music/placeholder.mp3",
+                "duration": 260
+            },
+            {
+                "title": "Something",
+                "url": "/music/placeholder.mp3",
+                "duration": 183
+            },
+            {
+                "title": "Maxwell's Silver Hammer",
+                "url": "/music/placeholder.mp3",
+                "duration": 208
+            },
+            {
+                "title": "Oh! Darling",
+                "url": "/music/placeholder.mp3",
+                "duration": 207
+            },
+            {
+                "title": "Octopus's Garden",
+                "url": "/music/placeholder.mp3",
+                "duration": 171
+            },
+            {
+                "title": "I Want You (She's So Heavy)",
+                "url": "/music/placeholder.mp3",
+                "duration": 467
+            },
+            {
+                "title": "Here Comes the Sun",
+                "url": "/music/placeholder.mp3",
+                "duration": 185
+            },
+            {
+                "title": "Because",
+                "url": "/music/placeholder.mp3",
+                "duration": 165
+            },
+            {
+                "title": "You Never Give Me Your Money",
+                "url": "/music/placeholder.mp3",
+                "duration": 242
+            },
+            {
+                "title": "Sun King",
+                "url": "/music/placeholder.mp3",
+                "duration": 146
+            },
+            {
+                "title": "Mean Mr. Mustard",
+                "url": "/music/placeholder.mp3",
+                "duration": 66
+            },
+            {
+                "title": "Polythene Pam",
+                "url": "/music/placeholder.mp3",
+                "duration": 73
+            },
+            {
+                "title": "She Came In Through the Bathroom Window",
+                "url": "/music/placeholder.mp3",
+                "duration": 118
+            },
+            {
+                "title": "Golden Slumbers",
+                "url": "/music/placeholder.mp3",
+                "duration": 91
+            },
+            {
+                "title": "Carry That Weight",
+                "url": "/music/placeholder.mp3",
+                "duration": 96
+            },
+            {
+                "title": "The End",
+                "url": "/music/placeholder.mp3",
+                "duration": 125
+            },
+            {
+                "title": "Her Majesty",
+                "url": "/music/placeholder.mp3",
+                "duration": 23
+            }
+        ],
+        "description": "披头士最后的录音室专辑，经典之作，穿越半个世纪的音乐奇迹。",
+        "purchaseDate": "2023-03-15",
+        "purchaseLocation": "东京 Tower Records",
+        "addedAt": 1710484200
+    },
+    {
+        "id": 2,
+        "title": "Thriller",
+        "artist": "Michael Jackson",
+        "year": 1982,
+        "genre": "流行",
+        "style": "流行 / 放克 / 迪斯科",
+        "cover": "https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png",
+        "tracks": [
+            {
+                "title": "Wanna Be Startin' Somethin'",
+                "url": "/music/placeholder.mp3",
+                "duration": 363
+            },
+            {
+                "title": "Baby Be Mine",
+                "url": "/music/placeholder.mp3",
+                "duration": 260
+            },
+            {
+                "title": "The Girl Is Mine",
+                "url": "/music/placeholder.mp3",
+                "duration": 222
+            },
+            {
+                "title": "Thriller",
+                "url": "/music/placeholder.mp3",
+                "duration": 358
+            },
+            {
+                "title": "Beat It",
+                "url": "/music/placeholder.mp3",
+                "duration": 258
+            },
+            {
+                "title": "Billie Jean",
+                "url": "/music/placeholder.mp3",
+                "duration": 295
+            },
+            {
+                "title": "Human Nature",
+                "url": "/music/placeholder.mp3",
+                "duration": 246
+            },
+            {
+                "title": "P.Y.T. (Pretty Young Thing)",
+                "url": "/music/placeholder.mp3",
+                "duration": 239
+            },
+            {
+                "title": "The Lady in My Life",
+                "url": "/music/placeholder.mp3",
+                "duration": 300
+            }
+        ],
+        "description": "流行音乐史上最畅销专辑，定义了一个时代的节奏与灵魂。",
+        "purchaseDate": "2022-11-08",
+        "purchaseLocation": "纽约 Amoeba Music",
+        "addedAt": 1699409700
+    },
+    {
+        "id": 3,
+        "title": "The Dark Side of the Moon",
+        "artist": "Pink Floyd",
+        "year": 1973,
+        "genre": "前卫摇滚",
+        "style": "前卫摇滚 / 迷幻摇滚",
+        "cover": "https://upload.wikimedia.org/wikipedia/en/3/3b/Dark_Side_of_the_Moon.png",
+        "tracks": [
+            {
+                "title": "Speak to Me",
+                "url": "/music/placeholder.mp3",
+                "duration": 61
+            },
+            {
+                "title": "Breathe",
+                "url": "/music/placeholder.mp3",
+                "duration": 163
+            },
+            {
+                "title": "On the Run",
+                "url": "/music/placeholder.mp3",
+                "duration": 231
+            },
+            {
+                "title": "Time",
+                "url": "/music/placeholder.mp3",
+                "duration": 413
+            },
+            {
+                "title": "The Great Gig in the Sky",
+                "url": "/music/placeholder.mp3",
+                "duration": 284
+            },
+            {
+                "title": "Money",
+                "url": "/music/placeholder.mp3",
+                "duration": 382
+            },
+            {
+                "title": "Us and Them",
+                "url": "/music/placeholder.mp3",
+                "duration": 462
+            },
+            {
+                "title": "Any Colour You Like",
+                "url": "/music/placeholder.mp3",
+                "duration": 206
+            },
+            {
+                "title": "Brain Damage",
+                "url": "/music/placeholder.mp3",
+                "duration": 226
+            },
+            {
+                "title": "Eclipse",
+                "url": "/music/placeholder.mp3",
+                "duration": 124
+            }
+        ],
+        "description": "概念专辑的巅峰，探索时间、金钱与疯狂的哲学之旅。",
+        "purchaseDate": "2024-01-20",
+        "purchaseLocation": "伦敦 Rough Trade",
+        "addedAt": 1718870400
+    },
+    {
+        "id": 4,
+        "title": "Rumours",
+        "artist": "Fleetwood Mac",
+        "year": 1977,
+        "genre": "摇滚",
+        "style": "软摇滚 / 流行摇滚",
+        "cover": "https://upload.wikimedia.org/wikipedia/en/f/fb/FMacRumours.PNG",
+        "tracks": [
+            {
+                "title": "Second Hand News",
+                "url": "/music/placeholder.mp3",
+                "duration": 167
+            },
+            {
+                "title": "Dreams",
+                "url": "/music/placeholder.mp3",
+                "duration": 254
+            },
+            {
+                "title": "Never Going Back Again",
+                "url": "/music/placeholder.mp3",
+                "duration": 122
+            },
+            {
+                "title": "Don't Stop",
+                "url": "/music/placeholder.mp3",
+                "duration": 191
+            },
+            {
+                "title": "Go Your Own Way",
+                "url": "/music/placeholder.mp3",
+                "duration": 218
+            },
+            {
+                "title": "Songbird",
+                "url": "/music/placeholder.mp3",
+                "duration": 200
+            },
+            {
+                "title": "The Chain",
+                "url": "/music/placeholder.mp3",
+                "duration": 268
+            },
+            {
+                "title": "You Make Loving Fun",
+                "url": "/music/placeholder.mp3",
+                "duration": 216
+            },
+            {
+                "title": "I Don't Want to Know",
+                "url": "/music/placeholder.mp3",
+                "duration": 195
+            },
+            {
+                "title": "Oh Daddy",
+                "url": "/music/placeholder.mp3",
+                "duration": 234
+            },
+            {
+                "title": "Gold Dust Woman",
+                "url": "/music/placeholder.mp3",
+                "duration": 291
+            }
+        ],
+        "description": "摇滚史上最伟大的分手专辑，每一首歌都是情感的碎片。",
+        "purchaseDate": "2023-07-12",
+        "purchaseLocation": "洛杉矶 The Record Parlour",
+        "addedAt": 1689126300
+    },
+    {
+        "id": 5,
+        "title": "Hotel California",
+        "artist": "Eagles",
+        "year": 1976,
+        "genre": "摇滚",
+        "style": "软摇滚 / 乡村摇滚",
+        "cover": "https://upload.wikimedia.org/wikipedia/en/4/49/Hotel_California_cover.jpg",
+        "tracks": [
+            {
+                "title": "Hotel California",
+                "url": "/music/placeholder.mp3",
+                "duration": 391
+            },
+            {
+                "title": "New Kid in Town",
+                "url": "/music/placeholder.mp3",
+                "duration": 304
+            },
+            {
+                "title": "Life in the Fast Lane",
+                "url": "/music/placeholder.mp3",
+                "duration": 286
+            },
+            {
+                "title": "Wasted Time",
+                "url": "/music/placeholder.mp3",
+                "duration": 295
+            },
+            {
+                "title": "Victim of Love",
+                "url": "/music/placeholder.mp3",
+                "duration": 249
+            },
+            {
+                "title": "Pretty Maids All in a Row",
+                "url": "/music/placeholder.mp3",
+                "duration": 240
+            },
+            {
+                "title": "Try and Love Again",
+                "url": "/music/placeholder.mp3",
+                "duration": 311
+            },
+            {
+                "title": "The Last Resort",
+                "url": "/music/placeholder.mp3",
+                "duration": 445
+            }
+        ],
+        "description": "加州摇滚的不朽经典，同名曲的吉他独奏永载史册。",
+        "purchaseDate": "2022-05-30",
+        "purchaseLocation": "旧金山 Amoeba Music",
+        "addedAt": 1706617800
+    },
+    {
+        "id": 6,
+        "title": "Back in Black",
+        "artist": "AC/DC",
+        "year": 1980,
+        "genre": "硬摇滚",
+        "style": "硬摇滚 / 重金属",
+        "cover": "https://upload.wikimedia.org/wikipedia/en/5/53/ACDC_Back_in_Black.png",
+        "tracks": [
+            {
+                "title": "Hells Bells",
+                "url": "/music/placeholder.mp3",
+                "duration": 312
+            },
+            {
+                "title": "Shoot to Thrill",
+                "url": "/music/placeholder.mp3",
+                "duration": 317
+            },
+            {
+                "title": "What Do You Do for Money Honey",
+                "url": "/music/placeholder.mp3",
+                "duration": 215
+            },
+            {
+                "title": "Given the Dog a Bone",
+                "url": "/music/placeholder.mp3",
+                "duration": 211
+            },
+            {
+                "title": "Let Me Put My Love Into You",
+                "url": "/music/placeholder.mp3",
+                "duration": 254
+            },
+            {
+                "title": "Back in Black",
+                "url": "/music/placeholder.mp3",
+                "duration": 255
+            },
+            {
+                "title": "You Shook Me All Night Long",
+                "url": "/music/placeholder.mp3",
+                "duration": 210
+            },
+            {
+                "title": "Have a Drink on Me",
+                "url": "/music/placeholder.mp3",
+                "duration": 238
+            },
+            {
+                "title": "Shake a Leg",
+                "url": "/music/placeholder.mp3",
+                "duration": 245
+            },
+            {
+                "title": "Rock and Roll Ain't Noise Pollution",
+                "url": "/music/placeholder.mp3",
+                "duration": 266
+            }
+        ],
+        "description": "硬摇滚的教科书，AC/DC在失去主唱后的涅槃重生。",
+        "purchaseDate": "2023-09-18",
+        "purchaseLocation": "柏林 Dodo Beach",
+        "addedAt": 1695006000
+    },
+    {
+        "id": 7,
+        "title": "Kind of Blue",
+        "artist": "Miles Davis",
+        "year": 1959,
+        "genre": "爵士",
+        "style": "模态爵士 / 冷爵士",
+        "cover": "https://upload.wikimedia.org/wikipedia/en/7/76/MilesDavis_KindofBlue.jpg",
+        "tracks": [
+            {
+                "title": "So What",
+                "url": "/music/placeholder.mp3",
+                "duration": 562
+            },
+            {
+                "title": "Freddie Freeloader",
+                "url": "/music/placeholder.mp3",
+                "duration": 587
+            },
+            {
+                "title": "Blue in Green",
+                "url": "/music/placeholder.mp3",
+                "duration": 326
+            },
+            {
+                "title": "All Blues",
+                "url": "/music/placeholder.mp3",
+                "duration": 695
+            },
+            {
+                "title": "Flamenco Sketches",
+                "url": "/music/placeholder.mp3",
+                "duration": 566
+            }
+        ],
+        "description": "爵士乐史上最伟大的专辑，即兴演奏的完美教科书。",
+        "purchaseDate": "2024-02-14",
+        "purchaseLocation": "巴黎 Gibert Joseph",
+        "addedAt": 1713075600
+    },
+    {
+        "id": 8,
+        "title": "Born to Run",
+        "artist": "Bruce Springsteen",
+        "year": 1975,
+        "genre": "摇滚",
+        "style": "心脏摇滚 / 民谣摇滚",
+        "cover": "https://upload.wikimedia.org/wikipedia/en/4/4d/Born_to_Run_cover.jpg",
+        "tracks": [
+            {
+                "title": "Thunder Road",
+                "url": "/music/placeholder.mp3",
+                "duration": 289
+            },
+            {
+                "title": "Tenth Avenue Freeze-Out",
+                "url": "/music/placeholder.mp3",
+                "duration": 221
+            },
+            {
+                "title": "Night",
+                "url": "/music/placeholder.mp3",
+                "duration": 180
+            },
+            {
+                "title": "Backstreets",
+                "url": "/music/placeholder.mp3",
+                "duration": 390
+            },
+            {
+                "title": "Born to Run",
+                "url": "/music/placeholder.mp3",
+                "duration": 270
+            },
+            {
+                "title": "She's the One",
+                "url": "/music/placeholder.mp3",
+                "duration": 278
+            },
+            {
+                "title": "Meeting Across the River",
+                "url": "/music/placeholder.mp3",
+                "duration": 198
+            },
+            {
+                "title": "Jungleland",
+                "url": "/music/placeholder.mp3",
+                "duration": 574
+            }
+        ],
+        "description": "来自美国梦的原始呐喊，布鲁斯·斯普林斯汀的事业转折点。",
+        "purchaseDate": "2022-08-22",
+        "purchaseLocation": "芝加哥 Reckless Records",
+        "addedAt": 1692695400
+    },
+    {
+        "id": 9,
+        "title": "紫色",
+        "artist": "林忆莲",
+        "year": 1990,
+        "genre": "流行",
+        "style": "华语流行 / 抒情",
+        "cover": "https://i.scdn.co/image/ab67616d0000b27380b1efb4e6ec79479f4c8a59",
+        "tracks": [
+            {
+                "title": "爱上一个不回家的人",
+                "url": "/music/placeholder.mp3",
+                "duration": 280
+            },
+            {
+                "title": "你是我胸口永远的痛",
+                "url": "/music/placeholder.mp3",
+                "duration": 276
+            },
+            {
+                "title": "走火入魔",
+                "url": "/music/placeholder.mp3",
+                "duration": 265
+            },
+            {
+                "title": "哦 今夜",
+                "url": "/music/placeholder.mp3",
+                "duration": 250
+            },
+            {
+                "title": "给我爱",
+                "url": "/music/placeholder.mp3",
+                "duration": 242
+            },
+            {
+                "title": "就让世界多一颗心",
+                "url": "/music/placeholder.mp3",
+                "duration": 258
+            },
+            {
+                "title": "梦上海",
+                "url": "/music/placeholder.mp3",
+                "duration": 270
+            },
+            {
+                "title": "哈啰寂寞",
+                "url": "/music/placeholder.mp3",
+                "duration": 245
+            },
+            {
+                "title": "情人的眼泪",
+                "url": "/music/placeholder.mp3",
+                "duration": 260
+            }
+        ],
+        "description": "林忆莲都市情歌的巅峰之作，细腻柔美的听觉盛宴。",
+        "purchaseDate": "2023-05-10",
+        "purchaseLocation": "台北 茉莉唱片",
+        "addedAt": 1707537600
+    },
+    {
+        "id": 10,
+        "title": "未来的主人翁",
+        "artist": "罗大佑",
+        "year": 1983,
+        "genre": "民谣摇滚",
+        "style": "民谣摇滚 / 社会批判",
+        "cover": "https://i.scdn.co/image/ab67616d0000b273f3b6d37a4e4c64bdfe1798f6",
+        "tracks": [
+            {
+                "title": "未来的主人翁",
+                "url": "/music/placeholder.mp3",
+                "duration": 320
+            },
+            {
+                "title": "亚细亚的孤儿",
+                "url": "/music/placeholder.mp3",
+                "duration": 284
+            },
+            {
+                "title": "现象七十二变",
+                "url": "/music/placeholder.mp3",
+                "duration": 310
+            },
+            {
+                "title": "牧童",
+                "url": "/music/placeholder.mp3",
+                "duration": 240
+            },
+            {
+                "title": "稻草人",
+                "url": "/music/placeholder.mp3",
+                "duration": 255
+            },
+            {
+                "title": "诞生",
+                "url": "/music/placeholder.mp3",
+                "duration": 270
+            },
+            {
+                "title": "耶稣的另一个名字",
+                "url": "/music/placeholder.mp3",
+                "duration": 290
+            },
+            {
+                "title": "小妹",
+                "url": "/music/placeholder.mp3",
+                "duration": 230
+            }
+        ],
+        "description": "罗大佑极具社会责任感的专辑，华语音乐的思想丰碑。",
+        "purchaseDate": "2024-04-01",
+        "purchaseLocation": "高雄 城市唱片",
+        "addedAt": 1714548600
+    },
+    {
+        "id": 11,
+        "title": "范特西",
+        "artist": "周杰伦",
+        "year": 2001,
+        "genre": "流行/R&B",
+        "style": "R&B / 中国风 / 说唱",
+        "cover": "https://upload.wikimedia.org/wikipedia/en/9/9c/Jay_Chow_Fantasy.jpg",
+        "tracks": [
+            {
+                "title": "爱在西元前",
+                "url": "/music/placeholder.mp3",
+                "duration": 234
+            },
+            {
+                "title": "爸我回来了",
+                "url": "/music/placeholder.mp3",
+                "duration": 240
+            },
+            {
+                "title": "简单爱",
+                "url": "/music/placeholder.mp3",
+                "duration": 252
+            },
+            {
+                "title": "忍者",
+                "url": "/music/placeholder.mp3",
+                "duration": 216
+            },
+            {
+                "title": "开不了口",
+                "url": "/music/placeholder.mp3",
+                "duration": 288
+            },
+            {
+                "title": "上海一九四三",
+                "url": "/music/placeholder.mp3",
+                "duration": 260
+            },
+            {
+                "title": "对不起",
+                "url": "/music/placeholder.mp3",
+                "duration": 240
+            },
+            {
+                "title": "威廉古堡",
+                "url": "/music/placeholder.mp3",
+                "duration": 242
+            },
+            {
+                "title": "双截棍",
+                "url": "/music/placeholder.mp3",
+                "duration": 210
+            },
+            {
+                "title": "安静",
+                "url": "/music/placeholder.mp3",
+                "duration": 325
+            }
+        ],
+        "description": "周杰伦的现象级专辑，华语R&B的新纪元从这里开始。",
+        "purchaseDate": "2023-11-25",
+        "purchaseLocation": "上海 浣熊唱片店",
+        "addedAt": 1700877600
+    },
+    {
+        "id": 12,
+        "title": "浮躁",
+        "artist": "王菲",
+        "year": 1996,
+        "genre": "另类流行",
+        "style": "梦泡 / 另类流行",
+        "cover": "https://i.scdn.co/image/ab67616d0000b273e888b8510b7d0f5e6c64c92a",
+        "tracks": [
+            {
+                "title": "无常",
+                "url": "/music/placeholder.mp3",
+                "duration": 232
+            },
+            {
+                "title": "浮躁",
+                "url": "/music/placeholder.mp3",
+                "duration": 187
+            },
+            {
+                "title": "末日",
+                "url": "/music/placeholder.mp3",
+                "duration": 265
+            },
+            {
+                "title": "哪儿",
+                "url": "/music/placeholder.mp3",
+                "duration": 210
+            },
+            {
+                "title": "堕落",
+                "url": "/music/placeholder.mp3",
+                "duration": 285
+            },
+            {
+                "title": "不安",
+                "url": "/music/placeholder.mp3",
+                "duration": 252
+            },
+            {
+                "title": "野三坡",
+                "url": "/music/placeholder.mp3",
+                "duration": 315
+            },
+            {
+                "title": "分裂",
+                "url": "/music/placeholder.mp3",
+                "duration": 228
+            },
+            {
+                "title": "扫兴",
+                "url": "/music/placeholder.mp3",
+                "duration": 195
+            }
+        ],
+        "description": "王菲最空灵迷离的实验之作，另类流行的东方美学巅峰。",
+        "purchaseDate": "2022-12-03",
+        "purchaseLocation": "北京 独音唱片",
+        "addedAt": 1704260700
+    },
+    {
+        "id": 13,
+        "title": "OK Computer",
+        "artist": "Radiohead",
+        "year": 1997,
+        "genre": "另类摇滚",
+        "style": "另类摇滚 / 艺术摇滚",
+        "cover": "https://upload.wikimedia.org/wikipedia/en/b/ba/Radioheadokcomputer.png",
+        "tracks": [
+            {
+                "title": "Airbag",
+                "url": "/music/placeholder.mp3",
+                "duration": 284
+            },
+            {
+                "title": "Paranoid Android",
+                "url": "/music/placeholder.mp3",
+                "duration": 383
+            },
+            {
+                "title": "Subterranean Homesick Alien",
+                "url": "/music/placeholder.mp3",
+                "duration": 267
+            },
+            {
+                "title": "Exit Music (For a Film)",
+                "url": "/music/placeholder.mp3",
+                "duration": 264
+            },
+            {
+                "title": "Let Down",
+                "url": "/music/placeholder.mp3",
+                "duration": 299
+            },
+            {
+                "title": "Karma Police",
+                "url": "/music/placeholder.mp3",
+                "duration": 261
+            },
+            {
+                "title": "Fitter Happier",
+                "url": "/music/placeholder.mp3",
+                "duration": 117
+            },
+            {
+                "title": "Electioneering",
+                "url": "/music/placeholder.mp3",
+                "duration": 230
+            },
+            {
+                "title": "Climbing Up the Walls",
+                "url": "/music/placeholder.mp3",
+                "duration": 285
+            },
+            {
+                "title": "No Surprises",
+                "url": "/music/placeholder.mp3",
+                "duration": 229
+            },
+            {
+                "title": "Lucky",
+                "url": "/music/placeholder.mp3",
+                "duration": 260
+            },
+            {
+                "title": "The Tourist",
+                "url": "/music/placeholder.mp3",
+                "duration": 326
+            }
+        ],
+        "description": "Radiohead对现代生活的绝望预言，另类摇滚的里程碑。",
+        "purchaseDate": "2024-06-08",
+        "purchaseLocation": "东京 Disk Union",
+        "addedAt": 1717840800
+    },
+    {
+        "id": 14,
+        "title": "Nevermind",
+        "artist": "Nirvana",
+        "year": 1991,
+        "genre": "垃圾摇滚",
+        "style": "垃圾摇滚 / 另类摇滚",
+        "cover": "https://upload.wikimedia.org/wikipedia/en/b/b7/NirvanaNevermindalbumcover.jpg",
+        "tracks": [
+            {
+                "title": "Smells Like Teen Spirit",
+                "url": "/music/placeholder.mp3",
+                "duration": 301
+            },
+            {
+                "title": "In Bloom",
+                "url": "/music/placeholder.mp3",
+                "duration": 254
+            },
+            {
+                "title": "Come as You Are",
+                "url": "/music/placeholder.mp3",
+                "duration": 218
+            },
+            {
+                "title": "Breed",
+                "url": "/music/placeholder.mp3",
+                "duration": 184
+            },
+            {
+                "title": "Lithium",
+                "url": "/music/placeholder.mp3",
+                "duration": 256
+            },
+            {
+                "title": "Polly",
+                "url": "/music/placeholder.mp3",
+                "duration": 176
+            },
+            {
+                "title": "Territorial Pissings",
+                "url": "/music/placeholder.mp3",
+                "duration": 142
+            },
+            {
+                "title": "Drain You",
+                "url": "/music/placeholder.mp3",
+                "duration": 223
+            },
+            {
+                "title": "Lounge Act",
+                "url": "/music/placeholder.mp3",
+                "duration": 156
+            },
+            {
+                "title": "Stay Away",
+                "url": "/music/placeholder.mp3",
+                "duration": 211
+            },
+            {
+                "title": "On a Plain",
+                "url": "/music/placeholder.mp3",
+                "duration": 194
+            },
+            {
+                "title": "Something in the Way",
+                "url": "/music/placeholder.mp3",
+                "duration": 232
+            }
+        ],
+        "description": "垃圾摇滚的革命宣言，Kurt Cobain用吉他点燃了一代人的怒火。",
+        "purchaseDate": "2023-02-14",
+        "purchaseLocation": "西雅图 Easy Street Records",
+        "addedAt": 1681435800
+    },
+    {
+        "id": 15,
+        "title": "万能青年旅店",
+        "artist": "万能青年旅店",
+        "year": 2010,
+        "genre": "独立摇滚",
+        "style": "独立摇滚 / 另类摇滚",
+        "cover": "https://i.scdn.co/image/ab67616d0000b273ea10a758ac25d77fbb135d6b",
+        "tracks": [
+            {
+                "title": "杀死那个石家庄人",
+                "url": "/music/placeholder.mp3",
+                "duration": 352
+            },
+            {
+                "title": "揪心的玩笑与漫长的白日梦",
+                "url": "/music/placeholder.mp3",
+                "duration": 328
+            },
+            {
+                "title": "大石碎胸口",
+                "url": "/music/placeholder.mp3",
+                "duration": 340
+            },
+            {
+                "title": "秦皇岛",
+                "url": "/music/placeholder.mp3",
+                "duration": 560
+            },
+            {
+                "title": "十万嬉皮",
+                "url": "/music/placeholder.mp3",
+                "duration": 285
+            },
+            {
+                "title": "在这颗行星所有的酒馆",
+                "url": "/music/placeholder.mp3",
+                "duration": 310
+            },
+            {
+                "title": "山雀",
+                "url": "/music/placeholder.mp3",
+                "duration": 296
+            },
+            {
+                "title": "采石",
+                "url": "/music/placeholder.mp3",
+                "duration": 420
+            },
+            {
+                "title": "河北墨麒麟",
+                "url": "/music/placeholder.mp3",
+                "duration": 520
+            }
+        ],
+        "description": "来自石家庄的独立摇滚史诗，中文摇滚叙事的新高度。",
+        "purchaseDate": "2024-03-20",
+        "purchaseLocation": "南京 先锋书店",
+        "addedAt": 1710922500
+    }
+]
