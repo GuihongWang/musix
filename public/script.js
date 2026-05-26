@@ -318,7 +318,7 @@ function playAlbum(album, startIdx) {
   isPlaying = true;
 
   const track = album.tracks[currentTrackIndex];
-  audio.src = track.token ? `/api/stream/${album.id}/${currentTrackIndex}?t=${track.token}` : track.url;
+  audio.src = streamUrl(album, currentTrackIndex, track);
   audio.volume = volume;
   audio.play().catch(() => {
     // audio not available, simulate

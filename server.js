@@ -43,10 +43,10 @@ app.get('/api/albums', (req, res) => {
   const data = JSON.parse(
     fs.readFileSync(path.join(__dirname, 'public', 'data', 'albums.json'), 'utf-8')
   );
-  // 返回时注入每个 track 的 token
+  // 返回时注入每个 track 的 token（仅限本地路径）
   data.forEach(album => {
     album.tracks.forEach((track, i) => {
-      track.token = makeToken(album.id, i);
+      if (track.url && track.url.startsWith('/')) track.token = makeToken(album.id, i);
     });
   });
   res.json(data);
@@ -58,9 +58,9 @@ app.get('/api/albums/:id', (req, res) => {
   );
   const album = data.find(a => a.id === parseInt(req.params.id));
   if (!album) return res.status(404).json({ error: 'Album not found' });
-  // 注入 token
+  // 注入 token（仅限本地路径）
   album.tracks.forEach((track, i) => {
-    track.token = makeToken(album.id, i);
+    if (track.url && track.url.startsWith('/')) track.token = makeToken(album.id, i);
   });
   res.json(album);
 });
@@ -86,11 +86,12 @@ app.get('/api/stream/:albumId/:trackIndex', (req, res) => {
     fs.readFileSync(path.join(__dirname, 'public', 'data', 'albums.json'), 'utf-8')
   );
   const album = data.find(a => a.id === parseInt(albumId));
-  if (!album || !album.tracks[parseInt(trackIndex)]) {
+  if (!album) return res.status(404).json({ error: 'Not found' });
+  const track = album.tracks[parseInt(trackIndex)];
+  if (!track || !track.url.startsWith('/')) {
     return res.status(404).json({ error: 'Not found' });
   }
-
-  const filePath = path.join(__dirname, 'public', album.tracks[parseInt(trackIndex)].url);
+  const filePath = path.join(__dirname, 'public', track.url);
   if (!fs.existsSync(filePath)) {
     return res.status(404).json({ error: 'File not found' });
   }
