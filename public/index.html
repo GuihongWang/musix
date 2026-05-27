@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="ai-agent" id="aiAgentMeta" content="">
-  <!-- ★ 自定义网站标题 -->
-  <title>我的CD收藏 - iTunes</title>
+  <!-- 标题由 config.json 的 siteTitle 控制 -->
+  <title></title>
   <link rel="stylesheet" href="styles.css">
   <!-- ★ 自定义 CSS：编辑 custom.css 覆盖样式 -->
   <link rel="stylesheet" href="custom.css">
@@ -22,8 +22,8 @@
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polygon points="19 20 9 12 19 4"/><rect x="5" y="4" width="1.5" height="16" fill="currentColor"/></svg>
         </button>
         <button class="tb-btn tb-play" id="playBtn" title="播放/暂停">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" id="playIcon"><polygon points="8,4 20,12 8,20"/></svg>
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" id="pauseIcon" class="hidden"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+          <svg viewBox="0 0 32 28" width="16" height="14" fill="currentColor" id="playIcon"><path d="M10.345 23.287c.415 0 .763-.15 1.22-.407l12.742-7.404c.838-.481 1.178-.855 1.178-1.46 0-.599-.34-.972-1.178-1.462L11.565 5.158c-.457-.265-.805-.407-1.22-.407-.789 0-1.345.606-1.345 1.57V21.71c0 .971.556 1.577 1.345 1.577z" fill-rule="nonzero"/></svg>
+          <svg viewBox="0 0 32 28" width="16" height="14" fill="currentColor" id="pauseIcon" class="hidden"><path d="M13.293 22.772c.955 0 1.436-.481 1.436-1.436V6.677c0-.98-.481-1.427-1.436-1.427h-2.457c-.954 0-1.436.473-1.436 1.427v14.66c-.008.954.473 1.435 1.436 1.435h2.457zm7.87 0c.954 0 1.427-.481 1.427-1.436V6.677c0-.98-.473-1.427-1.428-1.427h-2.465c-.955 0-1.428.473-1.428 1.427v14.66c0 .954.473 1.435 1.428 1.435h2.465z" fill-rule="nonzero"/></svg>
         </button>
         <button class="tb-btn" id="nextBtn" title="下一首">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 4 15 12 5 20"/><rect x="17.5" y="4" width="1.5" height="16" fill="currentColor"/></svg>
@@ -44,8 +44,8 @@
           <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#bbb" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4" fill="#bbb"/></svg>
         </div>
         <div class="tb-center-text">
-          <div class="tb-center-title" id="infoTitle">未播放</div>
-          <div class="tb-center-sub" id="infoSub">从专辑中选择歌曲</div>
+          <div class="tb-center-title" id="infoTitle"></div>
+          <div class="tb-center-sub" id="infoSub"></div>
         </div>
       </div>
 
@@ -101,10 +101,10 @@
             <!-- ★ 自定义：LOGO + 标题 -->
             <div class="sl-logo" style="margin-bottom:2px;">
               <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4" fill="#fff"/></svg>
-              <span style="font-size:12px;">我的音乐</span>
+              <span style="font-size:12px;"></span>
             </div>
-            <div style="font-size:9px;color:var(--text-light);line-height:1.3;margin-bottom:3px;">仅作为版权收藏用途展示</div>
-            <span id="albumCount" style="font-size:10px;">15 张专辑</span>
+            <div id="brandCopyright" style="font-size:9px;color:var(--text-light);line-height:1.3;margin-bottom:3px;">仅作为版权收藏用途展示</div>
+            <span id="albumCount" style="font-size:10px;"></span>
           </div>
       </aside>
 
@@ -117,7 +117,7 @@
           <button class="tb-btn tb-nav" id="forwardBtn" title="前进">
             <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
           </button>
-          <span style="font-size:11px;color:var(--text-muted);margin-left:6px;" id="albumCountSub">15 张专辑</span>
+          <span style="font-size:11px;color:var(--text-muted);margin-left:6px;" id="albumCountSub"></span>
         </div>
 
         <div class="content-area" id="contentArea">

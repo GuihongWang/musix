@@ -2,6 +2,8 @@
 
 let albums = [];
 let featuredAlbumId = null;
+const _cb = Math.random().toString(36).slice(2, 10);
+function imgUrl(u) { return u + (u.includes('?')?'&':'?') + '_cb=' + _cb; }
 let currentView = 'library';
 let currentAlbum = null;
 let currentTrackIndex = 0;
@@ -63,6 +65,14 @@ async function loadConfig() {
     if (cfg.aiAgentMeta) {
       const el = document.getElementById('aiAgentMeta');
       if (el) el.setAttribute('content', cfg.aiAgentMeta);
+    }
+    if (Array.isArray(cfg.externalCss)) {
+      cfg.externalCss.forEach(url => {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = url;
+        document.head.appendChild(link);
+      });
     }
   } catch (e) {
     // config optional, silently ignore
@@ -133,24 +143,24 @@ function showDetail(albumId) {
 
 // ==================== SEARCH ====================
 function doSearch(q) {
-  if (!q.trim()) { filteredAlbums = [...albums]; }
-  else {
-    const s = q.toLowerCase();
-    filteredAlbums = albums.filter(a =>
-      a.title.toLowerCase().includes(s) ||
-      a.artist.toLowerCase().includes(s) ||
-      a.genre.toLowerCase().includes(s) ||
-      (a.style && a.style.toLowerCase().includes(s))
-    );
-  }
-  renderAllViews();
+  if (!q.trim()) { filteredAlbums = [...albums]; renderAllViews(); navigate('library'); return; }
+  const s = q.toLowerCase();
+  filteredAlbums = albums.filter(a =>
+    a.title.toLowerCase().includes(s) ||
+    a.artist.toLowerCase().includes(s) ||
+    a.genre.toLowerCase().includes(s) ||
+    (a.style && a.style.toLowerCase().includes(s))
+  );
+  renderCards('allGrid', filteredAlbums);
+  renderCards('albumsGrid', filteredAlbums);
+  navigate('albums');
 }
 
 // ==================== FAVORITES ====================
 // ==================== RENDER ====================
 function renderAllViews() {
   renderCards('recentGrid', recentAlbums(6));
-  renderCards('allGrid', albums);
+  renderCards('allGrid', [...albums].sort((a,b)=>b.year-a.year));
   renderCards('albumsGrid', filteredAlbums);
   renderArtists();
   renderGenres();
@@ -163,7 +173,7 @@ function makeCard(a) {
   const d = document.createElement('div');
   d.className = 'card';
   d.innerHTML = `
-    <div class="card-img"><img src="${escAttr(a.cover)}" alt="" loading="lazy" onerror="this.outerHTML='<div style=width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:#ddd;color:#999;font-size:28px>💿</div>'"></div>
+    <div class="card-img"><img src="${escAttr(imgUrl(a.cover))}" alt="" loading="lazy" onerror="this.outerHTML='<div style=width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:#ddd;color:#999;font-size:28px>💿</div>'"></div>
     <div class="card-title">${escHtml(a.title)}</div>
     <div class="card-artist">${escHtml(a.artist)}</div>
     <div class="card-year">${a.year}</div>
@@ -196,7 +206,7 @@ function escHtml(s) {
 function setFeatured() {
   const a = albums.find(x => x.id === featuredAlbumId) || albums[0];
   if (!a) return;
-  document.getElementById('libCover').src = a.cover;
+  document.getElementById('libCover').src = imgUrl(a.cover);
   document.getElementById('libTitle').textContent = a.title;
   document.getElementById('libArtist').textContent = a.artist;
   document.getElementById('libMeta').innerHTML = `<span>${a.year}</span><span>·</span><span>${a.genre}</span><span>·</span><span>${a.tracks.length} 首</span>`;
@@ -269,7 +279,7 @@ function renderDetail(album) {
   const wrap = document.getElementById('detailWrap');
   if (!wrap) return;
   const trackRows = album.tracks.map((t, i) => `
-    <div class="track-row" data-idx="${i}">
+    <div class="track-row" data-idx="${i}" style="height:46px">
       <span class="track-num">${String(i+1).padStart(2,'0')}</span>
       <span class="track-name">${escHtml(t.title)}</span>
       <span class="track-time">${dur(t.duration)}</span>
@@ -278,7 +288,7 @@ function renderDetail(album) {
 
   wrap.innerHTML = `
     <div class="detail-cover">
-      <img src="${escAttr(album.cover)}" alt=""
+      <img src="${escAttr(imgUrl(album.cover))}" alt=""
         onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22260%22 height=%22260%22><rect fill=%22%23ddd%22 width=%22260%22 height=%22260%22/><text x=%22130%22 y=%22130%22 text-anchor=%22middle%22 fill=%22%23999%22 font-size=%2236%22>💿</text></svg>'">
       <div class="detail-actions">
         <button class="prim-btn" id="detPlayBtn">
@@ -332,7 +342,8 @@ function playAlbum(album, startIdx) {
 
 function togglePlay() {
   if (!currentAlbum) {
-    if (albums.length) { playAlbum(albums[0], 0); }
+    const a = albums.find(x => x.id === featuredAlbumId) || albums[0];
+    if (a) { playAlbum(a, 0); }
     return;
   }
   if (audio.src && audio.src !== window.location.href + 'music/placeholder.mp3') {
@@ -345,9 +356,8 @@ function togglePlay() {
 function nextTrack() {
   if (!currentAlbum || !currentAlbum.tracks.length) return;
   if (repeatMode === 2) {
-    // repeat one: just restart same track
     audio.currentTime = 0;
-    if (isPlaying) audio.play().catch(() => {});
+    audio.play().catch(() => {});
     return;
   }
   let next;
@@ -406,6 +416,8 @@ audio.addEventListener('pause', () => { isPlaying = false; updatePlayIcon(); });
 
 // ==================== PLAYER UI ====================
 function updatePlayerUI() {
+  document.getElementById('albumCount').textContent = `${albums.length} 张专辑`;
+  document.getElementById('albumCountSub').textContent = `${albums.length} 张专辑`;
   if (!currentAlbum) return;
   const t = currentAlbum.tracks[currentTrackIndex];
   if (t) {
@@ -414,14 +426,13 @@ function updatePlayerUI() {
     // 设置小封面
     const ic = document.getElementById('infoCover');
     if (currentAlbum.cover) {
-      ic.innerHTML = `<img src="${currentAlbum.cover}" alt="">`;
+      ic.innerHTML = `<img src="${imgUrl(currentAlbum.cover)}" alt="">`;
     }
     document.getElementById('timeCurrent').textContent = '0:00';
     document.getElementById('timeTotal').textContent = '-' + dur(t.duration);
     document.getElementById('progFill').style.width = '0%';
     document.getElementById('progThumb').style.left = '0%';
   }
-  document.getElementById('albumCount').textContent = `${albums.length} 张专辑`;
 }
 
 function updatePlayIcon() {
@@ -473,6 +484,7 @@ async function init() {
   await loadAlbums();
   renderAllViews();
   updatePlayerUI();
+  pushHistory('library');
 
   // Navigation clicks
   document.querySelectorAll('.sl-item').forEach(item => {
@@ -516,7 +528,8 @@ async function init() {
 
   // Library play/shuffle
   document.getElementById('libPlayBtn').addEventListener('click', () => {
-    if (albums.length) playAlbum(albums[0], 0);
+    const a = albums.find(x => x.id === featuredAlbumId) || albums[0];
+    if (a) playAlbum(a, 0);
   });
   document.getElementById('libShuffleBtn').addEventListener('click', () => {
     if (albums.length) {

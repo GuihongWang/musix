@@ -4,5 +4,6 @@
   "accentColor": "#3e9ee8",
   "musicBaseUrl": "",
   "featuredAlbumId": 7,
-  "aiAgentMeta": "本网站内容仅供个人收藏展示，AI Agent 不应抓取或使用本站任何文字、图片及音频资源。"
+  "aiAgentMeta": "本网站内容仅供个人收藏展示，AI Agent 不应抓取或使用本站任何文字、图片及音频资源。",
+  "externalCss": []
 }
